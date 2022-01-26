@@ -29,7 +29,7 @@ struct GuideListView: View {
             // Section loop
             ForEach(0..<groupedGuides.count, id: \.self) { startIndex in
                 let guides = groupedGuides[startIndex]
-                Section(guides.first?.startDate ?? "") {
+                Section(header: Text(guides.first?.startDate ?? "").font(.title3)) {
 
                     // Cell loop
                     ForEach(0..<guides.count, id: \.self) { guideIndex in

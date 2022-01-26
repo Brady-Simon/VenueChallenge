@@ -15,16 +15,20 @@ struct NetworkManager {
     static func load<T: Decodable>(url: URL, type: T.Type) -> Result<T, NetworkError> {
         if let data  = try? Data(contentsOf: url) {
             
-            let logger = os.Logger()
-            logger.log("\(data)")
-            
             // Data available; try decoding as JSON.
             let decoder = JSONDecoder()
             
             // Decode data
             do {
                 let result = try decoder.decode(T.self, from: data)
-                print(result)
+                
+                // Log output
+                // Note: NSLog seems to cut off output after a certain length,
+                // so it's followed by a print statement to see all data in Xcode.
+                NSLog("%@", NSString(string: "\(result)"))
+                print("-----")
+                print("\(result)")
+                
                 return .success(result)
             } catch let error {
                 print(String(describing: error))

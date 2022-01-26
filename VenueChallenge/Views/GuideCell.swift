@@ -42,7 +42,6 @@ struct GuideCell: View {
                 // City and state
                 if let location = guide.venue?.location {
                     Text(location)
-                        .font(.body)
                 }
                 
                 // Start and end date
