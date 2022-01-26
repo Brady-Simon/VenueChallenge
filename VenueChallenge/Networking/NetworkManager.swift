@@ -15,16 +15,19 @@ struct NetworkManager {
     static func load<T: Decodable>(url: URL, type: T.Type) -> Result<T, NetworkError> {
         if let data  = try? Data(contentsOf: url) {
             
+            let logger = os.Logger()
+            logger.log("\(data)")
+            
             // Data available; try decoding as JSON.
             let decoder = JSONDecoder()
             
-            if let result = try? decoder.decode(T.self, from: data) {
-                // Data successfully processed.
-                let logger = os.Logger()
-                logger.log("\(data)")
+            // Decode data
+            do {
+                let result = try decoder.decode(T.self, from: data)
+                print(result)
                 return .success(result)
-            } else {
-                // Couldn't process the data.
+            } catch let error {
+                print(String(describing: error))
                 return .failure(.decodingFailure)
             }
             

@@ -20,26 +20,33 @@ struct GuideCell: View {
     var body: some View {
         HStack {
             // Image
-            AsyncImage(url: URL(string: guide.icon))
-                .aspectRatio(nil, contentMode: .fit)
-                .frame(maxWidth: 100, maxHeight: 100)
+            AsyncImage(url: URL(string: guide.icon)) { image in
+                 image
+                    .resizable()
+                    .aspectRatio(nil, contentMode: .fit)
+                    .frame(maxWidth: 75, maxHeight: 75)
+            } placeholder: {
+                ProgressView()
+                    .frame(width: 75, height: 75)
+            }
+            .padding(.trailing)
             
             VStack(alignment: .leading) {
+                
                 // Name
                 Text(guide.name)
-                    .font(.title3)
+                    .bold()
                     .padding(.bottom, 4)
+                    .fixedSize(horizontal: false, vertical: true)
                 
                 // City and state
-                if let location = guide.venue.location {
+                if let location = guide.venue?.location {
                     Text(location)
                         .font(.body)
                 }
                 
                 // Start and end date
-                Text(guideDuration)
-                    .font(.caption)
-                    .foregroundColor(.gray)
+                Text("Ends \(guide.endDate)")
             }
             
             Spacer()

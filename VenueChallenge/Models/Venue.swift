@@ -11,13 +11,18 @@ import Foundation
 struct Venue: Codable {
     
     /// The city in which this venue will appear.
-    var city: String = ""
+    var city: String? = ""
     
     /// The state in which this venue will appear.
-    var state: String = ""
+    var state: String? = ""
     
     /// A combination of `city` and `state` into one string.
     var location: String? {
+        
+        // Wrap city and state in case nil.
+        let city = city ?? ""
+        let state = state ?? ""
+        
         // Ensure at least city or state is present.
         guard !city.isEmpty || !state.isEmpty else { return nil }
         

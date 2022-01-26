@@ -24,7 +24,8 @@ struct Guide: Codable {
     /// The URL for the icon.
     var icon: String
     
-    var venue: Venue
+    /// The venue for this guide.
+    var venue: Venue? = nil
     
     /// The type of object this represents.
     var objType: String
@@ -32,4 +33,13 @@ struct Guide: Codable {
     /// Whether or not a login is required for this guide.
     var loginRequired: Bool
     
+}
+
+extension Guide {
+    /// The start date, formatted using a `DateFormatter` to get a real `Date`.
+    var sortDate: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM dd, yyyy"
+        return dateFormatter.date(from: startDate)
+    }
 }
