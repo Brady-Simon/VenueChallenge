@@ -6,32 +6,23 @@
 //
 
 import Foundation
-import os
 
 /// Manages the URL and resources associated with loading remote guides.
-struct GuideCollectionResource {
+/// Serves as a convenient location to store URLs and wrap `NetworkManager`.
+struct GuideResource {
     
     /// The URL to use for fetching upcoming guides.
     var url: String = "https://guidebook.com/service/v2/upcomingGuides/"
     
     /// Fetches the `GuideCollection` at `url`,
     /// or returns `nil` if something goes wrong.
-    func fetch() -> GuideCollection? {
+    func fetch() -> Result<GuideCollection, NetworkError> {
         // Make sure the URL can be created.
-        guard let networkUrl = URL(string: url) else { return nil }
+        guard let networkUrl = URL(string: url) else { return .failure(.unavailable) }
         
-        // Load up the API
+        // Load from the network and return the result.
         let result = NetworkManager.load(url: networkUrl, type: GuideCollection.self)
-        
-        switch result {
-        case .success(let collection):
-            return collection
-        case .failure(let error):
-            // Debug the output and return nil
-            let logger = os.Logger()
-            logger.log("Failed to fetch guides: \(error.localizedDescription)")
-            return nil
-        }
+        return result
     }
     
 }
