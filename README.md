@@ -106,4 +106,8 @@ nested array so that each subarray represents a group of
 guides that have the same start date. While this solution does
 work, it would ideally be refactored into a custom struct
 like `GroupedGuides` where its intent is more clear than 
-nested arrays. 
+nested arrays. This object could have a property called 
+`sections` that contains the unique, sorted start dates,
+and a function that returns the sorted guides for the given
+start date. This would make future maintenance much better
+than a nested array and generally improve readability.
