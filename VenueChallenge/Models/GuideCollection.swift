@@ -11,8 +11,8 @@ import Foundation
 struct GuideCollection: Codable {
     
     /// The total number of elements in `data`.
-    var total: Int
+    var total: Int = 0
     
     /// The upcoming guides.
-    var data: [Guide]
+    var data: [Guide] = []
 }
