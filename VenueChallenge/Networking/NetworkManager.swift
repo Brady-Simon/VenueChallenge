@@ -8,6 +8,7 @@
 import Foundation
 import os
 
+/// Allows fetching data from a `URL`.
 struct NetworkManager {
     
     /// Attempts to load data of type `T` from `url`.

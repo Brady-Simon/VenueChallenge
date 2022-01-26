@@ -13,6 +13,9 @@
 		CAC1C18D27A0C3AC00B12258 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC1C18C27A0C3AC00B12258 /* Preview Assets.xcassets */; };
 		CAC1C19627A0C3F500B12258 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1C19527A0C3F500B12258 /* NetworkError.swift */; };
 		CAC1C19827A0C40C00B12258 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1C19727A0C40C00B12258 /* NetworkManager.swift */; };
+		CAC1C19B27A0C7D200B12258 /* GuideCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1C19A27A0C7D200B12258 /* GuideCollection.swift */; };
+		CAC1C19D27A0C7EE00B12258 /* Guide.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1C19C27A0C7EE00B12258 /* Guide.swift */; };
+		CAC1C19F27A0C8E100B12258 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1C19E27A0C8E100B12258 /* Venue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		CAC1C18C27A0C3AC00B12258 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAC1C19527A0C3F500B12258 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		CAC1C19727A0C40C00B12258 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CAC1C19A27A0C7D200B12258 /* GuideCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollection.swift; sourceTree = "<group>"; };
+		CAC1C19C27A0C7EE00B12258 /* Guide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guide.swift; sourceTree = "<group>"; };
+		CAC1C19E27A0C8E100B12258 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		CAC1C18427A0C3AA00B12258 /* VenueChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				CAC1C19927A0C78D00B12258 /* Models */,
 				CAC1C19427A0C3E500B12258 /* Views */,
 				CAC1C19327A0C3BF00B12258 /* Networking */,
 				CAC1C18927A0C3AC00B12258 /* Assets.xcassets */,
@@ -87,6 +94,16 @@
 				CAC1C18727A0C3AA00B12258 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CAC1C19927A0C78D00B12258 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1C19A27A0C7D200B12258 /* GuideCollection.swift */,
+				CAC1C19C27A0C7EE00B12258 /* Guide.swift */,
+				CAC1C19E27A0C8E100B12258 /* Venue.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC1C19B27A0C7D200B12258 /* GuideCollection.swift in Sources */,
+				CAC1C19D27A0C7EE00B12258 /* Guide.swift in Sources */,
 				CAC1C19827A0C40C00B12258 /* NetworkManager.swift in Sources */,
+				CAC1C19F27A0C8E100B12258 /* Venue.swift in Sources */,
 				CAC1C19627A0C3F500B12258 /* NetworkError.swift in Sources */,
 				CAC1C18827A0C3AA00B12258 /* ContentView.swift in Sources */,
 				CAC1C18627A0C3AA00B12258 /* VenueChallengeApp.swift in Sources */,
