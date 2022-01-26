@@ -18,6 +18,7 @@
 		CAC1C19F27A0C8E100B12258 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1C19E27A0C8E100B12258 /* Venue.swift */; };
 		CAC1C1A427A0CB2300B12258 /* GuideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1C1A327A0CB2300B12258 /* GuideViewModel.swift */; };
 		CAC1C1A727A0CBF100B12258 /* GuideResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1C1A627A0CBF100B12258 /* GuideResource.swift */; };
+		CAC1C1AB27A0D14500B12258 /* GuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1C1AA27A0D14500B12258 /* GuideCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CAC1C19E27A0C8E100B12258 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		CAC1C1A327A0CB2300B12258 /* GuideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewModel.swift; sourceTree = "<group>"; };
 		CAC1C1A627A0CBF100B12258 /* GuideResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideResource.swift; sourceTree = "<group>"; };
+		CAC1C1AA27A0D14500B12258 /* GuideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				CAC1C18527A0C3AA00B12258 /* VenueChallengeApp.swift */,
 				CAC1C18727A0C3AA00B12258 /* ContentView.swift */,
+				CAC1C1AA27A0D14500B12258 /* GuideCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				CAC1C19B27A0C7D200B12258 /* GuideCollection.swift in Sources */,
 				CAC1C1A427A0CB2300B12258 /* GuideViewModel.swift in Sources */,
+				CAC1C1AB27A0D14500B12258 /* GuideCell.swift in Sources */,
 				CAC1C19D27A0C7EE00B12258 /* Guide.swift in Sources */,
 				CAC1C19827A0C40C00B12258 /* NetworkManager.swift in Sources */,
 				CAC1C19F27A0C8E100B12258 /* Venue.swift in Sources */,

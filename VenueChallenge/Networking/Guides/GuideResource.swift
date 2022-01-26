@@ -14,8 +14,7 @@ struct GuideResource {
     /// The URL to use for fetching upcoming guides.
     var url: String = "https://guidebook.com/service/v2/upcomingGuides/"
     
-    /// Fetches the `GuideCollection` at `url`,
-    /// or returns `nil` if something goes wrong.
+    /// Fetches the `GuideCollection` at `url`.
     func fetch() -> Result<GuideCollection, NetworkError> {
         // Make sure the URL can be created.
         guard let networkUrl = URL(string: url) else { return .failure(.unavailable) }

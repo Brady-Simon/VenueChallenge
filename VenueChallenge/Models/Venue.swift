@@ -16,4 +16,19 @@ struct Venue: Codable {
     /// The state in which this venue will appear.
     var state: String = ""
     
+    /// A combination of `city` and `state` into one string.
+    var location: String? {
+        // Ensure at least city or state is present.
+        guard !city.isEmpty || !state.isEmpty else { return nil }
+        
+        // Return either city, state, or a combination if possible.
+        if city.isEmpty {
+            return state
+        } else if state.isEmpty {
+            return city
+        } else {
+            return "\(city), \(state)"
+        }
+    }
+    
 }
